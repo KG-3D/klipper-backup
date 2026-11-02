@@ -1,0 +1,14 @@
+[Unit]
+Description=API Server for Klipper GREEN
+After=network.target
+
+[Service]
+Type=simple
+User=kayogaldino
+WorkingDirectory=/home/kayogaldino/moonraker
+ExecStart=/home/kayogaldino/moonraker-env/bin/python /home/kayogaldino/moonraker/moonraker/moonraker.py -d /home/kayogaldino/printer_GREEN_data -c /home/kayogaldino/printer_GREEN_data/config/moonraker.conf -l /home/kayogaldino/printer_GREEN_data/logs/moonraker.log
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,15 @@
+[Unit]
+Description=Klipper Daemon GREEN
+Requires=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+User=kayogaldino
+WorkingDirectory=/home/kayogaldino/klipper
+ExecStart=/home/kayogaldino/klippy-env/bin/python /home/kayogaldino/klipper/klippy/klippy.py /home/kayogaldino/printer_GREEN_data/config/printer.cfg -l /home/kayogaldino/printer_GREEN_data/logs/klippy.log -a /home/kayogaldino/printer_GREEN_data/comms/klippy.sock
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

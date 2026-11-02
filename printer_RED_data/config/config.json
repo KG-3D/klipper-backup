@@ -1,0 +1,9 @@
+{
+    "instances": [
+        {
+            "name": "RED",
+            "url": "http://192.168.1.157:7125",
+            "active": true
+        }
+    ]
+}
